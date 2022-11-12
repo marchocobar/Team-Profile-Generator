@@ -8,8 +8,8 @@ function generateEngineerCard(engineer) {
                            <h5 class="card-title">${engineer.name}</h5>
                            <h6 class="card-subtitle mb-2 text-muted">${engineer.getRole()}</h6>
                            <p class="card-text">ID: ${engineer.id}</p>
-                           <a href="mailto:${engineer.email}" class="card-link">${engineer.email}</a>
-                           <a href="https://github.com/${engineer.github}" class="card-link">${engineer.github}</a>                    
+                           <p>Github: <a href="https://github.com/${engineer.github}" class="card-link">${engineer.github}</a> </p>
+                           <a href="mailto:${engineer.email}" class="card-link">${engineer.email}</a>                  
                        </div>
                      </div>
                    </div>
@@ -80,8 +80,11 @@ function generateHTML(data) {
            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
        </head>
        <body>
+       <nav class="navbar navbar-dark bg-primary justify-content-center">
+       <h1 class="navbar-brand" style="font-size: 40px;">My Team</h1>
+      </nav>
        <div class="container mt-5">
-         <div class="row row-cols-1 row-cols-md-2 g-4">
+         <div class="row row-cols-1 row-cols-sm-3 g-4">
            ${teamcardsArray.join(' ')}    
            </div>
            </div>      
